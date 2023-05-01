@@ -27,6 +27,7 @@ def send_the_index(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', send_the_index),
     # path('', include('cm_tracker_app.urls')),
 ]
 
