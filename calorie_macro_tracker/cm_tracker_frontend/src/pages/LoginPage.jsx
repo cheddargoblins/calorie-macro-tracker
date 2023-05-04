@@ -2,7 +2,7 @@ import {  useContext, useState } from "react";
 import { logIn } from "../utilities";
 import { UserContext } from "../App";
 
-export const LogIn = () => {
+export const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const {user} = useContext(UserContext)
