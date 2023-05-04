@@ -1,17 +1,31 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, Group, Permission
 from django.apps import apps
+from django.utils.translation import gettext_lazy as _
 
-# Create your models here.
+
 class App_User(AbstractUser):
-    email = models.EmailField(blank = False, null = False, unique = True)
-   
+    email = models.EmailField(blank=False, null=False, unique=True)
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
-  
+    groups = models.ManyToManyField(
+        Group,
+        blank=True,
+        related_name='app_users', # Add a related_name argument
+        verbose_name=_('groups'),
+        help_text=_('The groups this user belongs to. A user will get all permissions granted to each of their groups.'),
+        related_query_name='app_user',
+    )
+    user_permissions = models.ManyToManyField(
+        Permission,
+        blank=True,
+        related_name='app_users', # Add a related_name argument
+        verbose_name=_('user permissions'),
+        help_text=_('Specific permissions for this user.'),
+        related_query_name='app_user',
+    )
+    
 apps.register_model(App_User, model=AbstractUser)
-
-
 
 
 class Food(models.Model):
@@ -49,7 +63,7 @@ class User_Profile(models.Model):
     weight = models.PositiveIntegerField(default=1)
     age = models.PositiveIntegerField(default=1)
     gender = models.CharField(max_length=6, choices=[("male", "Male"), ("female", "Female"), ("other", "Other")])
-    activity_level = models.CharField(max_length=6, choices=[("sedentary", "Sedentary"), ("moderate", "Moderate"), ("active", "Active")])
+    activity_level = models.CharField(max_length=9, choices=[("sedentary", "Sedentary"), ("moderate", "Moderate"), ("active", "Active")])
     fitness_goal = models.CharField(max_length=255)
     daily_protein_goal = models.FloatField(default=0)
     daily_carbs_goal = models.FloatField(default=0)
