@@ -5,6 +5,7 @@ import { RecordMealPage } from './pages/RecordMealPage';
 import { LoginPage } from './pages/LoginPage';
 import { CalendarPage } from './pages/CalendarPage';
 import App from './App';
+import { SignUp } from './pages/SignUp';
 
 
 const Router = createHashRouter([
@@ -19,6 +20,10 @@ const Router = createHashRouter([
             {
                 path: '/login/',
                 element: <LoginPage />,
+            },
+            {
+                path: '/signup/',
+                element: <SignUp />,
             },
             {
                 path: '/search/',

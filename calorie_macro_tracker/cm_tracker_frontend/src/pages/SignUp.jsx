@@ -1,24 +1,28 @@
-import {  useContext, useState } from "react";
-import { logIn } from "../utilities";
-import { UserContext } from "../App";
+import { useState } from "react";
+import { signUp } from "../utilities";
 
-export const LogIn = () => {
+export const SignUp = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const {user} = useContext(UserContext)
-  const {setUser} = useContext(UserContext)
- 
 
   return (
     <form
       onSubmit={(e) => [
         e.preventDefault(),
-        logIn(email, password, setUser),
+        signUp(name, email, password),
         setEmail(""),
         setPassword(""),
+        setName(""),
       ]}
+      style={{ display: "flex", flexDirection: "column" }}
     >
-      <h3>Log In</h3>
+      <h3>Sign Up</h3>
+      <input
+        placeholder="name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
       <input
         placeholder="email"
         value={email}
@@ -30,7 +34,7 @@ export const LogIn = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <input type="submit" value="Log In" />
+      <input type="submit" value="signUp" />
     </form>
   );
 };

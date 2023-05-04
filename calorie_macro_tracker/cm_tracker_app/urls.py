@@ -18,5 +18,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.send_the_index, name='index'),
+    # path('', views.send_the_index, name='index'),
+    path('user/', views.user_capabilities, name='user_capabilities'),
 ]
