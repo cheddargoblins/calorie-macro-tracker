@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-
+      
       <UserContext.Provider value={{ user, setUser }}>
         <Outlet />
       </UserContext.Provider>
