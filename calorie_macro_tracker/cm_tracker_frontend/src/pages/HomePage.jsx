@@ -9,7 +9,7 @@ export const HomePage = () => {
       <h1>Take control of YOUR life</h1>
       <p>What are you waiting for?</p>
       <div className='home-btns'>
-        <Button to='/signup/'
+        <Button 
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'

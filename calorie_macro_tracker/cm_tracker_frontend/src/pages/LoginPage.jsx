@@ -1,6 +1,8 @@
 import {  useContext, useState } from "react";
 import { logIn } from "../utilities";
 import { UserContext } from "../App";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 export const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -10,27 +12,33 @@ export const LoginPage = () => {
  
 
   return (
-    <form
-      onSubmit={(e) => [
-        e.preventDefault(),
-        logIn(email, password, setUser),
-        setEmail(""),
-        setPassword(""),
-      ]}
-    >
-      <h3>Log In</h3>
-      <input
+    <Form onSubmit={(e) => [
+      e.preventDefault(),
+      logIn(email, password, setUser),
+      setEmail(""),
+      setPassword(""),
+    ]}>
+    <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form.Label>Email address</Form.Label>
+      <Form.Control 
         placeholder="email"
         value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
+        onChange={(e) => setEmail(e.target.value)}/>
+    </Form.Group>
+
+    <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Label>Password</Form.Label>
+      <Form.Control 
         placeholder="password"
         type="password"
         value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <input type="submit" value="Log In" />
-    </form>
+        onChange={(e) => setPassword(e.target.value)}/>
+    </Form.Group>
+
+    <Button variant="primary" type="submit">
+      Submit
+    </Button>
+    
+    </Form>
   );
 };
