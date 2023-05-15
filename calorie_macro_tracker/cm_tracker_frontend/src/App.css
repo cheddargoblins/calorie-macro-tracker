@@ -1,42 +1,59 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.HomePage,
+.Search,
+.RecordMeal,
+.sign-up {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  background-image: url('/home/jamesyork/Projects/calorie-macro-tracker/calorie-macro-tracker/calorie_macro_tracker/cm_tracker_frontend/src/assets/HomePage-background-img.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+.Search {
+  background-image: url('/home/jamesyork/Projects/calorie-macro-tracker/calorie-macro-tracker/calorie_macro_tracker/cm_tracker_frontend/src/assets/HomePage-background-img.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.RecordMeal {
+  background-image: url('/home/jamesyork/Projects/calorie-macro-tracker/calorie-macro-tracker/calorie_macro_tracker/cm_tracker_frontend/src/assets/HomePage-background-img.jpg');
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
 
-.card {
-  padding: 2em;
+.sign-up {
+  background-image: url('/home/jamesyork/Projects/calorie-macro-tracker/calorie-macro-tracker/calorie_macro_tracker/cm_tracker_frontend/src/assets/HomePage-background-img.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
 
-.read-the-docs {
-  color: #888;
+.HomePage {
+  background-image: url('/home/jamesyork/Projects/calorie-macro-tracker/calorie-macro-tracker/calorie_macro_tracker/cm_tracker_frontend/src/assets/HomePage-background-img.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
