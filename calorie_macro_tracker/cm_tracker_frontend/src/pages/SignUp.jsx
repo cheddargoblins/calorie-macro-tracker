@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { signUp } from "../utilities";
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 export const SignUp = () => {
   const [name, setName] = useState("");
@@ -7,34 +9,45 @@ export const SignUp = () => {
   const [password, setPassword] = useState("");
 
   return (
-    <form
+    <Form 
       onSubmit={(e) => [
-        e.preventDefault(),
-        signUp(name, email, password),
-        setEmail(""),
-        setPassword(""),
-        setName(""),
-      ]}
-      style={{ display: "flex", flexDirection: "column" }}
-    >
+      e.preventDefault(),
+      signUp(name, email, password),
+      setEmail(""),
+      setPassword(""),
+      setName(""),
+    ]}>
       <h3>Sign Up</h3>
-      <input
-        placeholder="name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <input
-        placeholder="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        placeholder="password"
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <input type="submit" value="signUp" />
-    </form>
+
+      <Form.Group className="mb-3">
+        <Form.Label>Name</Form.Label>
+        <Form.Control 
+          placeholder="Enter Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}/>
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control 
+          placeholder="Enter Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}/>
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control 
+          placeholder="Enter Password"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}/>
+      </Form.Group>
+
+    <Button variant="primary" type="submit">
+      Submit
+    </Button>
+
+    </Form>
   );
 };
