@@ -6,6 +6,7 @@ from django.utils.translation import gettext_lazy as _
 
 class App_User(AbstractUser):
     email = models.EmailField(blank=False, null=False, unique=True)
+    name = models.CharField(max_length=255, null=False, blank=False)
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
     groups = models.ManyToManyField(
