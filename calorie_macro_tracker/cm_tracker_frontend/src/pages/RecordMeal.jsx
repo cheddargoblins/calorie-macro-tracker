@@ -2,10 +2,7 @@ import { useState, useEffect } from "react"
 import axios from 'axios'
 import { SearchDetail } from "../components/SearchDetail"
 
-
-
-
-export const SearchPage = () => {
+export const RecordMeal = () => {
     const [query, setQuery] = useState('')
     const [recipes, setRecipes] = useState('')
     console.log(recipes)

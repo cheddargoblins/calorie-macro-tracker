@@ -17,43 +17,8 @@
 }
 
 body {
-  background-image: url('/home/jamesyork/Projects/calorie-macro-tracker/calorie-macro-tracker/calorie_macro_tracker/cm_tracker_frontend/src/assets/background1.jpg');
+  background-image: url('./assets/background1.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
-/* .Search {
-  background-image: url('/home/jamesyork/Projects/calorie-macro-tracker/calorie-macro-tracker/calorie_macro_tracker/cm_tracker_frontend/src/assets/foodbackground.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.RecordMeal {
-  background-image: url('/home/jamesyork/Projects/calorie-macro-tracker/calorie-macro-tracker/calorie_macro_tracker/cm_tracker_frontend/src/assets/HomePage-background-img.jpg');
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.sign-up {
-  background-image: url('/home/jamesyork/Projects/calorie-macro-tracker/calorie-macro-tracker/calorie_macro_tracker/cm_tracker_frontend/src/assets/HomePage-background-img.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.HomePage {
-  background-image: url('/home/jamesyork/Projects/calorie-macro-tracker/calorie-macro-tracker/calorie_macro_tracker/cm_tracker_frontend/src/assets/HomePage-background-img.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-} */
