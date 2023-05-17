@@ -4,6 +4,7 @@ import { UserContext } from "../App";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
+
 export const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,6 +13,8 @@ export const LoginPage = () => {
  
 
   return (
+    <div className="login-form">
+    <h3>Log In</h3>
     <Form onSubmit={(e) => [
       e.preventDefault(),
       logIn(email, password, setUser),
@@ -40,5 +43,6 @@ export const LoginPage = () => {
     </Button>
     
     </Form>
+    </div>
   );
 };

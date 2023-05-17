@@ -3,12 +3,14 @@ import { signUp } from "../utilities";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+
 export const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   return (
+
     <Form 
       onSubmit={(e) => [
       e.preventDefault(),
@@ -17,7 +19,8 @@ export const SignUp = () => {
       setPassword(""),
       setName(""),
     ]}>
-      <h3>Sign Up</h3>
+      <div className="signup-container">
+      <h3 className="signup-header">Sign Up</h3>
 
       <Form.Group className="mb-3">
         <Form.Label>Name</Form.Label>
@@ -44,10 +47,11 @@ export const SignUp = () => {
           onChange={(e) => setPassword(e.target.value)}/>
       </Form.Group>
 
-    <Button variant="primary" type="submit">
+    <Button variant="secondary" type="submit">
       Submit
     </Button>
-
+    </div>
     </Form>
+    
   );
 };

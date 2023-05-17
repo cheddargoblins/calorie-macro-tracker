@@ -1,59 +1,140 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'PT Sans', sans-serif;
-}
-
-.HomePage,
-.Search,
-.RecordMeal,
-.sign-up {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-}
-
 body {
-  background-image: url('/home/jamesyork/Projects/calorie-macro-tracker/calorie-macro-tracker/calorie_macro_tracker/cm_tracker_frontend/src/assets/background1.jpg');
+  background-image: url('./assets/background1.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-}
-/* .Search {
-  background-image: url('/home/jamesyork/Projects/calorie-macro-tracker/calorie-macro-tracker/calorie_macro_tracker/cm_tracker_frontend/src/assets/foodbackground.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+  padding-top: 120px;
+  justify-content: center;
 }
 
-.RecordMeal {
-  background-image: url('/home/jamesyork/Projects/calorie-macro-tracker/calorie-macro-tracker/calorie_macro_tracker/cm_tracker_frontend/src/assets/HomePage-background-img.jpg');
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+.home-container {
+  text-align: center;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  max-width: 500px;
+  max-height: 400px; 
+  padding: 20px;
+  padding-bottom: 20px; 
 }
 
-.sign-up {
-  background-image: url('/home/jamesyork/Projects/calorie-macro-tracker/calorie-macro-tracker/calorie_macro_tracker/cm_tracker_frontend/src/assets/HomePage-background-img.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+.wording {
+  margin: 0px;
 }
 
-.HomePage {
-  background-image: url('/home/jamesyork/Projects/calorie-macro-tracker/calorie-macro-tracker/calorie_macro_tracker/cm_tracker_frontend/src/assets/HomePage-background-img.jpg');
+.wording > h1 {
+  color:white;
+  text-align-last: center;
+  font-size: 65px;
+}
+
+.wording > p {
+  color:white;
+  font-size: 35px;
+}
+
+.home-btns {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.paragraph {
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 700px;
+  max-height: 800px; 
+  padding: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1.4);
+}
+
+.para-container {
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 50px;
+  background-color: #ffffffd9;
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-} */
+  max-width: 500%;
+  max-height: 350%;
+}
+
+.navbar-container {
+  background-color: rgba(9, 0, 183, 0.628);
+}
+
+.navbar-outer {
+  height: 120px;
+  background: linear-gradient(#0c0c0c, #ffffffd9);
+}
+
+.nav-name {
+  justify-content: start;
+  font-weight: bold;
+}
+
+.me-auto {
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  padding-right: 40px;
+}
+
+.signup-container {
+  background-color: rgba(255, 255, 255, 0.808);
+  color: rgba(9, 0, 183, 0.628);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.signup-header {
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  width: 300px;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.button {
+  width: 100%;
+}
+
+.login-form {
+  background-color: rgba(255, 255, 255, 0.808);
+  color: rgba(9, 0, 183, 0.628);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form-group {
+  width: 300px;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.button {
+  width: 100%;
+}

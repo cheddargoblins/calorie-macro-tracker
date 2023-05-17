@@ -1,9 +1,10 @@
-import React , { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import "./App.css";
 import { currUser } from "./utilities";
 import { getToken } from "./components/CSRF";
 import { NavBar } from "./components/NavBar";
 import { Outlet } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.css';
 
 export const UserContext = createContext([]);
 
