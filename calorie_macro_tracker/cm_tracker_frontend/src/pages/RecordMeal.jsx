@@ -1,41 +1,44 @@
-import { useState, useEffect } from "react"
+import { useState, useContext } from "react"
 import axios from 'axios'
 import { SearchDetail } from "../components/SearchDetail"
+import { MealItem } from "../components/MealItem";
+import { queryContext } from "../App";
 
 export const RecordMeal = () => {
-    const [query, setQuery] = useState('')
-    const [recipes, setRecipes] = useState('')
-    console.log(recipes)
-    
-    
-    const apiKey = 'QfOgfb2UXqHnhK2kqf675A==pG45bjuMZVggvC9P'
+    const [query, setQuery] = useContext(queryContext)
+    const [mealData, setMealData] = useState('')
+    const [mealItems, setMealItems] = useState([{ id: 1 }]);
 
     const handleSearch = async () => {
-        const response = await axios.get(`https://api.api-ninjas.com/v1/nutrition?query=${query}`
-    , {
+        const response = await axios.get(`https://api.api-ninjas.com/v1/nutrition?query=${query}`, {
         headers: {
-            'X-Api-Key': apiKey
-            }})
-    console.log(response)
-    setRecipes(response.data)
-}
+            'X-Api-Key': 'QfOgfb2UXqHnhK2kqf675A==pG45bjuMZVggvC9P'
+            }
+    })
+    console.log(response.data)
+    setMealData(response.data)
+    }
+
+    const addMealItem = () => {
+        const newId = mealItems.length + 1;
+        setMealItems([...mealItems, { id: newId }]);
+    };
+
    
     return (
         <div>
-            <header>Search For a Recipe Below</header>
-
-            <form onSubmit={handleSearch}>
-                <input type="text" placeholder="Search..." value={query} onChange={e=> [e.preventDefault(), setQuery(e.target.value)]} />
-                <input type="submit" value='Search' />
-            </form>
-            {
-                recipes && recipes.map((recipe, index) => (
-                    <SearchDetail 
-                        key={index}
-                        recipe={recipe}
-                    />  
-                )
-                )}
+            <header>Log Your Meals Below!</header>
+            {mealItems.map((mealItem) => (
+                <MealItem key={mealItem.id} />
+            ))}
+            <button onClick={addMealItem}>Add Meal Item</button>
         </div>
     )
 }
+
+// {mealData && mealData.map((mealData, index) => (
+//     <SearchDetail 
+//         key={index}
+//         mealData={mealData}
+//     />  
+// ))}
