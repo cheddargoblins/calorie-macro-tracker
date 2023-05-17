@@ -1,7 +1,7 @@
 import {createHashRouter} from 'react-router-dom';
-import { SearchPage } from './pages/SearchPage';
+import { SearchRecipe } from './pages/SearchRecipe';
 import { HomePage } from './pages/HomePage';
-import { RecordMealPage } from './pages/RecordMealPage';
+import { RecordMeal } from './pages/RecordMeal';
 import { LoginPage } from './pages/LoginPage';
 import { CalendarPage } from './pages/CalendarPage';
 import App from './App';
@@ -27,11 +27,11 @@ const Router = createHashRouter([
             },
             {
                 path: '/search/',
-                element: <SearchPage />,
+                element: <SearchRecipe />,
             },
             {
                 path: '/recordmeal/',
-                element: <RecordMealPage />,
+                element: <RecordMeal />,
             },
             {
                 path: '/calendar/',

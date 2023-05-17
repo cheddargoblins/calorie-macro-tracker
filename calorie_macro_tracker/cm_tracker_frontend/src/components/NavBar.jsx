@@ -36,7 +36,6 @@ export const NavBar = () => {
                 <li><Link to={'/recordmeal/'}class="nav-links" onClick={closeMoblieMenu}>Record Meal</Link></li>
                 <li><Link to={'/calendar/'}class="nav-links" onClick={closeMoblieMenu}>Calendar</Link></li>
             </ul>
-            {button && <Button buttonStyle='btn--outline'>Get Started</Button>}
             </div>
         </nav>
         </>

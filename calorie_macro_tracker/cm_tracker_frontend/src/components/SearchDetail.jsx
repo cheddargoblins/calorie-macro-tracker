@@ -1,5 +1,5 @@
 
-export const SearchDetail = ({recipe}) => {
+export const SearchDetail = ({mealData}) => {
     return (
         <div style={{display:'flex'}}>
             <div style={{textAlign:'left'}}>
@@ -18,18 +18,18 @@ export const SearchDetail = ({recipe}) => {
                 <hr />    
             </div>
             <div>
-                <div>{recipe.name}</div>
-                <div>{recipe.calories}</div>
-                <div>{recipe.carbohydrates_total_g}</div>
-                <div>{recipe.cholesterol_mg}</div>
-                <div>{recipe.fat_total_g}</div>
-                <div>{recipe.fat_saturated_g}</div>
-                <div>{recipe.fiber_g}</div>
-                <div>{recipe.potassium_mg}</div>
-                <div>{recipe.protein_g}</div>
-                <div>{recipe.serving_size_g}</div>
-                <div>{recipe.sodium_mg}</div>
-                <div>{recipe.sugar_g}</div>
+                <div>{mealData.name}</div>
+                <div>{mealData.calories}</div>
+                <div>{mealData.carbohydrates_total_g}</div>
+                <div>{mealData.cholesterol_mg}</div>
+                <div>{mealData.fat_total_g}</div>
+                <div>{mealData.fat_saturated_g}</div>
+                <div>{mealData.fiber_g}</div>
+                <div>{mealData.potassium_mg}</div>
+                <div>{mealData.protein_g}</div>
+                <div>{mealData.serving_size_g}</div>
+                <div>{mealData.sodium_mg}</div>
+                <div>{mealData.sugar_g}</div>
                 <hr />
             </div>
         </div>
